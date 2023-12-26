@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcxs73vx5dk0o"]
+
+[ext_resource type="Texture2D" uid="uid://bagp46gee1bso" path="res://Add a heading.png" id="1_67k41"]
+[ext_resource type="Script" path="res://Button.gd" id="2_m2xol"]
+[ext_resource type="Script" path="res://Button2.gd" id="3_58hw6"]
+[ext_resource type="Script" path="res://Button3.gd" id="4_nljmj"]
+
+[node name="Node" type="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(569, 320)
+scale = Vector2(1.01215, 1.01698)
+texture = ExtResource("1_67k41")
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 93.0
+offset_top = 242.0
+offset_right = 604.0
+offset_bottom = 353.0
+theme_override_colors/font_color = Color(0.898039, 0.898039, 0.898039, 1)
+theme_override_colors/font_pressed_color = Color(0.756863, 0.0392157, 0.619608, 1)
+theme_override_colors/font_hover_color = Color(0.823529, 0.929412, 0.976471, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0.352941, 0.521569, 0.247059, 1)
+theme_override_colors/icon_hover_color = Color(0.764706, 0.588235, 0.215686, 1)
+text = "PLAY"
+script = ExtResource("2_m2xol")
+
+[node name="exit" type="Button" parent="."]
+texture_filter = 1
+offset_left = 97.0
+offset_top = 486.0
+offset_right = 608.0
+offset_bottom = 598.0
+theme_override_colors/font_color = Color(0.898039, 0.898039, 0.898039, 1)
+theme_override_colors/font_pressed_color = Color(0.756863, 0.0392157, 0.619608, 1)
+theme_override_colors/font_hover_color = Color(0.823529, 0.929412, 0.976471, 1)
+theme_override_colors/icon_normal_color = Color(0.352941, 0.521569, 0.247059, 1)
+theme_override_colors/icon_hover_color = Color(0.764706, 0.588235, 0.215686, 1)
+text = "EXIT"
+script = ExtResource("3_58hw6")
+
+[node name="credits" type="Button" parent="."]
+texture_filter = 1
+offset_left = 94.0
+offset_top = 365.0
+offset_right = 605.0
+offset_bottom = 477.0
+theme_override_colors/font_color = Color(0.898039, 0.898039, 0.898039, 1)
+theme_override_colors/font_pressed_color = Color(0.756863, 0.0392157, 0.619608, 1)
+theme_override_colors/font_hover_color = Color(0.823529, 0.929412, 0.976471, 1)
+theme_override_colors/icon_normal_color = Color(0.352941, 0.521569, 0.247059, 1)
+theme_override_colors/icon_hover_color = Color(0.764706, 0.588235, 0.215686, 1)
+text = "CREDITS"
+script = ExtResource("4_nljmj")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_play_pressed"]
+[connection signal="pressed" from="exit" to="exit" method="_on_exit_pressed"]
+[connection signal="pressed" from="credits" to="credits" method="_on_exit_pressed"]
+[connection signal="pressed" from="credits" to="credits" method="_on_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://qoe4r4xpgy8x"
+path="res://.godot/imported/corridor.dialogue-58c32ed3923eea0d33acb7498ee339c2.tres"
+
+[deps]
+
+source_file="res://corridor.dialogue"
+dest_files=["res://.godot/imported/corridor.dialogue-58c32ed3923eea0d33acb7498ee339c2.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0tncgny2v8xp"]
+
+[ext_resource type="Texture2D" uid="uid://bdkcudmv37cm3" path="res://4.png" id="1_760vo"]
+[ext_resource type="Script" path="res://storyline3.gd" id="2_vuys1"]
+
+[node name="Node" type="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 326.5)
+scale = Vector2(1.00174, 1.00772)
+texture = ExtResource("1_760vo")
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 818.0
+offset_top = 531.0
+offset_right = 1105.0
+offset_bottom = 620.0
+theme_override_colors/font_color = Color(0.133333, 0.478431, 0.843137, 1)
+theme_override_colors/font_pressed_color = Color(0.713726, 0.105882, 0.501961, 1)
+theme_override_font_sizes/font_size = 54
+text = "Continue"
+script = ExtResource("2_vuys1")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

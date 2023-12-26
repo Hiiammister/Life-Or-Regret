@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx235n0h0ea6d"]
+
+[ext_resource type="Texture2D" uid="uid://b2w0iqgu7m8q4" path="res://controls.png" id="1_w1f3c"]
+[ext_resource type="Script" path="res://continue.gd" id="2_usyhy"]
+
+[node name="Node" type="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(585, 327)
+scale = Vector2(1.01215, 1.00926)
+texture = ExtResource("1_w1f3c")
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 798.0
+offset_top = 514.0
+offset_right = 1144.0
+offset_bottom = 628.0
+theme_override_colors/font_color = Color(0.231373, 0.756863, 0.827451, 1)
+theme_override_colors/font_pressed_color = Color(0.972549, 0.309804, 0.631373, 1)
+theme_override_colors/font_hover_color = Color(0.423529, 0.513726, 0.917647, 1)
+theme_override_font_sizes/font_size = 32
+text = "Press to Continue"
+script = ExtResource("2_usyhy")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

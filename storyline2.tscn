@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0an74magd56x"]
+
+[ext_resource type="Texture2D" uid="uid://wi05s1yrafuc" path="res://2.png" id="1_bssw8"]
+[ext_resource type="Script" path="res://storyline2.gd" id="2_117ml"]
+[ext_resource type="Script" path="res://storlineold.gd" id="3_ftbbs"]
+
+[node name="Node" type="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(572, 321)
+texture = ExtResource("1_bssw8")
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 818.0
+offset_top = 531.0
+offset_right = 1105.0
+offset_bottom = 620.0
+theme_override_colors/font_color = Color(0.133333, 0.478431, 0.843137, 1)
+theme_override_colors/font_pressed_color = Color(0.713726, 0.105882, 0.501961, 1)
+theme_override_font_sizes/font_size = 54
+text = "Continue"
+script = ExtResource("2_117ml")
+
+[node name="Button2" type="Button" parent="."]
+texture_filter = 1
+offset_left = 33.0
+offset_top = 534.0
+offset_right = 320.0
+offset_bottom = 623.0
+theme_override_colors/font_color = Color(0.133333, 0.478431, 0.843137, 1)
+theme_override_colors/font_pressed_color = Color(0.713726, 0.105882, 0.501961, 1)
+theme_override_font_sizes/font_size = 54
+text = "Go Back"
+script = ExtResource("3_ftbbs")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
